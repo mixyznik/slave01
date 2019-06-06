@@ -27,8 +27,8 @@ stages{
           sh 'yarn'
           sh 'yarn build'
           sh 'whoami'
-          echo "'' | sudo -S pm2 restart pencil"
-          echo "'' | sudo service nginx restart"
+          sh 'sudo pm2 restart pencil'
+          
           
           
          
