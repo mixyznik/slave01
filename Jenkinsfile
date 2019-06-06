@@ -6,7 +6,7 @@ pipeline {
    }
 } 
  
-  
+  tools {nodejs "node"}
 stages{
   stage('Change dir') {
       steps {   
