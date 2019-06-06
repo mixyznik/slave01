@@ -1,5 +1,10 @@
 pipeline {
-  agent slave01
+  agent {
+   node { 
+      label 'slave01'
+     
+   }
+} 
  
   tools {nodejs "node"}
 stages{
