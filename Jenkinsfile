@@ -19,11 +19,7 @@ stages{
           echo "Branch: ${env.BRANCH_NAME}"
        } 
     } 
-  } 
-
-
-stages{
-  stage('Change dir') {
+   stage('Change dir') {
       steps {   
         dir ('/var/www/workspace/proba_slave01_ssh_master') {
           sh 'pwd'
@@ -36,7 +32,8 @@ stages{
 
        } 
     } 
-} 
+
+  } 
 
 }    
  
