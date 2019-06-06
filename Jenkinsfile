@@ -24,9 +24,9 @@ stages{
         dir ('/var/www/workspace/proba_slave01_ssh_master') {
           sh 'pwd'
           sh 'ls'
-          sh 'sudo yarn'
-          sh 'sudo yarn build'
-          sh 'sudo pm2 restart test'
+          sh 'sudo -S yarn'
+          sh 'sudo -S yarn build'
+          
          
         }
 
