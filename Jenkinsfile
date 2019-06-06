@@ -17,15 +17,26 @@ stages{
           sh 'ls'
           sh 'git --version'
           echo "Branch: ${env.BRANCH_NAME}"
-          sh 'printenv'
-          sh 'sudo yarn'
-          sh 'sudo yarn build'
-        
-         
-        
-
        } 
     } 
   } 
+
+
+stages{
+  stage('Change dir') {
+      steps {   
+        dir ('/var/www/workspace/proba_slave01_ssh_master') {
+          sh 'pwd'
+          sh 'ls'
+          sh 'sudo yarn'
+          sh 'sudo yarn build'
+          sh 'sudo pm2 restart test'
+         
+        }
+
+       } 
+    } 
+} 
+
 }    
  
