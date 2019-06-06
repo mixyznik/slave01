@@ -26,7 +26,7 @@ stages{
           sh 'ls'
           sh 'yarn'
           sh 'yarn build'
-          sh 'sudo pm2 restart pencil'
+          sh 'pm2 restart pencil'
           
          
         }
