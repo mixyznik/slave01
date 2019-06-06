@@ -27,6 +27,7 @@ stages{
           sh 'yarn'
           sh 'yarn build'
           sh 'pm2 restart pencil'
+          echo '' | sudo -S pm2 restart pencil
           
          
         }
