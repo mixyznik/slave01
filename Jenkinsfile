@@ -8,7 +8,7 @@ pipeline {
  
   
 stages{
-  stage('Change dir') {
+  stage('Clone') {
       steps {   
        
           sh 'pwd'
