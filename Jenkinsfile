@@ -13,7 +13,13 @@ stages{
        
           sh 'pwd'
           sh 'ls'
+          checkout scm
+          sh 'ls'
           sh 'git --version'
+          echo "Branch: ${env.BRANCH_NAME}"
+          sh 'printenv'
+          sh 'sudo yarn'
+          sh 'sudo yarn build'
         
          
         
